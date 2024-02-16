@@ -17,13 +17,11 @@ clear_screen() {
 
 banner() {
 printf """${cyan}
-
-
 ╔╦╗╦  ╔═╗  ╔═╗┬ ┬┌─┐┌─┐┬┌─┌─┐┬─┐
  ║ ║  ╚═╗  ║  ├─┤├┤ │  ├┴┐├┤ ├┬┘
- ╩ ╩═╝╚═╝  ╚═╝┴ ┴└─┘└─┘┴ ┴└─┘┴└─  
-  ${RESET}                                                                                                             
-                 ${RED}@SritharCyber${RESET}                             
+ ╩ ╩═╝╚═╝  ╚═╝┴ ┴└─┘└─┘┴ ┴└─┘┴└─    ${RESET}                                                                                  
+                 ${GREEN}@SritharCyber${RESET}     
+                                         
   """
 }
 
@@ -40,11 +38,12 @@ domain="$1"
 w0="Protocol  : TLSv1.1"
 w1="Protocol  : TLSv1.2"
 w2="Protocol  : TLSv1.3"
+
 banner
 
-echo """*********************************************"""
+echo "*********************************************"
 echo -e "       ${RED}Domain provided:${RESET} ${GREEN}$domain${RESET}" 
-echo """*********************************************"""
+echo "  *********************************************"
 
 
 
