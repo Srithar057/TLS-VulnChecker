@@ -16,5 +16,7 @@ brew install gnutls-cli openssl
 
 **Usage**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+git clone https://github.com/SritharCyber/TLS-Checker.git
+cd TLS-Checker
 ./Tlschecker.sh domain.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
