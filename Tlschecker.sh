@@ -28,16 +28,14 @@ printf """${cyan}
    ░░░░░    ░░░░░░░░░░░  ░░░░░░░░░       ░░░░░░░░░  ░░░░ ░░░░░  ░░░░░░   ░░░░░░  ░░░░ ░░░░░  ░░░░░░  ░░░░░     
   ${RESET}                                                                                                             
                                                                                   ${RED}@SritharCyber${RESET}                             
-  ${GREEN}Usage: ./Tlschecker.sh domain.com
-
-${RESET}
-"""
+  """
 }
 
 
 if [ "$#" -eq 0 ]; then
+  banner    
   echo -e "${RED}Usage: $0 <domain>.com${RESET}"
-
+  exit
 fi
 
 
