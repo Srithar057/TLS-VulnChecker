@@ -20,7 +20,7 @@ printf """${cyan}
     ╔╦╗╦  ╔═╗  ╔═╗┬ ┬┌─┐┌─┐┬┌─┌─┐┬─┐
      ║ ║  ╚═╗  ║  ├─┤├┤ │  ├┴┐├┤ ├┬┘
      ╩ ╩═╝╚═╝  ╚═╝┴ ┴└─┘└─┘┴ ┴└─┘┴└─    ${RESET}                                                                                  
-                 ${GREEN}@SritharCyber${RESET}     
+                     ${GREEN}@SritharCyber${RESET}     
                                          
   """
 }
