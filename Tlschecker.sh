@@ -23,7 +23,7 @@ printf """${cyan}
  ║ ║  ╚═╗  ║  ├─┤├┤ │  ├┴┐├┤ ├┬┘
  ╩ ╩═╝╚═╝  ╚═╝┴ ┴└─┘└─┘┴ ┴└─┘┴└─  
   ${RESET}                                                                                                             
-                                                                                  ${RED}@SritharCyber${RESET}                             
+                 ${RED}@SritharCyber${RESET}                             
   """
 }
 
