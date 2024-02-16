@@ -1,6 +1,5 @@
 # TLS-Checker
-The TLS Version Checker Tool is a powerful and flexible command-line utility designed to identify and report the supported TLS versions of a given server. 
-
+The TLS Version Checker Tool is a powerful and flexible command-line utility designed to identify the supported TLS versions of a given Domain/Server. 
 
 **Requirements**
 
@@ -14,9 +13,10 @@ brew install gnutls-cli openssl
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-**Usage**
+**Installation & Usage**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 git clone https://github.com/SritharCyber/TLS-Checker.git
 cd TLS-Checker
+chmod +x ./Tlschecker.sh
 ./Tlschecker.sh domain.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
