@@ -100,8 +100,40 @@ if [[ "$v3" =~ $w2 ]]; then
   printf "TLSv1.3 is present.  - ${BLUEB}Info${RESET}\n"
 else
  printf "TLSv1.3 not present. - ${REDB}High${RESET}\n"
-
 fi
+
+t=$(testssl -H $domain:443 | awk '/(CVE-2014-0160)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t1=$(testssl -I $domain:443 | awk '/(CVE-2014-0224)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t2=$(testssl -T $domain:443 | awk '/(CVE-2016-9244)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t3=$(testssl --BB $domain:443 | awk '/ROBOT / {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t4=$(testssl -R $domain:443 | awk '/Secure/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t5=$(testssl -C $domain:443 | awk '/(CVE-2012-4929)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t6=$(testssl -B $domain:443 | awk '/(CVE-2013-3587)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t7=$(testssl -O $domain:443 | awk '/(CVE-2014-3566)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+#testssl -Z $domain:443 | awk '/RFC/ {print; getline; print; getline; print}' | awk '!seen[$0]++'
+t=8$(testssl -W $domain:443 | awk '/(CVE-2016-2183, CVE-2016-6329)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t=9$(testssl -A $domain:443 | awk '/(CVE-2011-3389)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t=10$(testssl -L $domain:443 | awk '/(CVE-2013-0169)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t=11$(testssl -WS $domain:443 | awk '/(CVE-2014-6321)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t=12$(testssl -F $domain:443 | awk '/(CVE-2015-0204)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t=13$(testssl -J $domain:443 | awk '/(CVE-2015-4000)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+t=14$(testssl -D $domain:443 | awk '/(CVE-2016-0800, CVE-2016-0703)/ {print; getline; print; getline; print}' | awk '!seen[$0]++')
+ printf "t\n"
+ printf "t1\n"
+ printf "t2\n"
+ printf "t3\n"
+ printf "t4\n"
+ printf "t5\n"
+ printf "t6\n"
+ printf "t7\n"
+ printf "t8\n"
+ printf "t9\n"
+ printf "t10\n"
+ printf "t11\n"
+ printf "t12\n"
+ printf "t13\n"
+ printf "t14\n"
+
 printf '\n'
 echo """--------------------------------------------------"""
 rm output.log output1.log output2.log output3.log
