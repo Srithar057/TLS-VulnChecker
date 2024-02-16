@@ -5,7 +5,7 @@ The TLS Version Checker Tool is a powerful and flexible command-line utility des
 
 For Linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-sudo apt install gnutls-cli openssl
+sudo apt install gnutls-bin openssl
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For MacOS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
