@@ -65,7 +65,7 @@ printf '\n'
 printf "${GREEN}Connecting IP:" 
 echo -e "${YELLOW}$output1${RESET}"
 
-printf "${GREEN}Your Domain TLS Version:" 
+printf "${GREEN}Your Domain SSL:" 
 echo -e "${YELLOW}$output4${RESET}"
 
 
