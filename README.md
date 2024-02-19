@@ -22,5 +22,5 @@ chmod +x ./Tlschecker.sh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Usage: ./newtest.sh <domain>.com (or) www.domain.com
+Usage: ./Tlschecker.sh <domain>.com (or) www.domain.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
