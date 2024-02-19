@@ -29,12 +29,12 @@ printf """${cyan}
 
 if [ "$#" -eq 0 ]; then
   banner    
-  echo -e "${RED}Usage: $0 <domain>.com${RESET}"
+  echo -e "${RED}Usage: $0 <domain>.com (or) www.domain.com ${RESET}"
   exit
 fi
 
-
 domain="$1"
+
 w0="Protocol  : TLSv1.1"
 w1="Protocol  : TLSv1.2"
 w2="Protocol  : TLSv1.3"
