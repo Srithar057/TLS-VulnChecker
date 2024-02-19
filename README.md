@@ -20,3 +20,7 @@ cd TLS-Checker
 chmod +x ./Tlschecker.sh
 ./Tlschecker.sh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Usage: ./newtest.sh <domain>.com (or) www.domain.com
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
