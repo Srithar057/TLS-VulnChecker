@@ -24,3 +24,5 @@ chmod +x ./Tlschecker.sh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Usage: ./Tlschecker.sh <domain>.com (or) www.domain.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<img width="1260" alt="Screenshot 2024-02-22 at 11 49 03 PM" src="https://github.com/Srithar057/TLS-Checker/assets/119922855/0e1af27f-64c7-45ef-a67e-7399b773fcd4">
