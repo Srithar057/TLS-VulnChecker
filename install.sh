@@ -27,9 +27,10 @@ fi
 
 mac() {
     
-required_tools=("openssl" "gnutls" "testssl")
+required_tools=("openssl" "gnutls-cli" "testssl.sh")
 
 count_installed=0
+
 for tool in "${required_tools[@]}"; do
     if command -v "$tool" &> /dev/null; then
         echo "$tool is installed."
@@ -45,7 +46,8 @@ else
     echo "Not all required tools are installed."
 fi
 
-    tool1=$(brew install testssl gnutls openssl)
+tool1=$(brew install testssl gnutls openssl > .output.log 2>&1)
+rm .output.log
 
 }
 
@@ -60,3 +62,5 @@ mac
 else
 linux
 fi
+
+chmod 777 Tlschecker.sh
