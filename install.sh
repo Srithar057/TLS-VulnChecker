@@ -26,7 +26,7 @@ for tool in "${required_tools[@]}"; do
 done
 
 echo """--------------------------------------------------"""
-if [ "$count_installed" -ge 1 ]; then
+if [ "$count_installed" -ge 3 ]; then
     printf "${GREEN}All required tools are already installed.${RESET}\n"
 else
     echo -e "${RED}\nNot all required tools are installed.${RESET}\n"
@@ -63,7 +63,7 @@ for tool in "${required_tools[@]}"; do
     fi
 done
 echo """--------------------------------------------------"""
-if [ "$count_installed" -ge 1 ]; then
+if [ "$count_installed" -ge 3 ]; then
     printf "${GREEN}All required tools are already installed.${RESET}\n"
 else
     echo -e "${RED}\nNot all required tools are installed.${RESET}\n"
@@ -78,11 +78,12 @@ else
     sleep 1
     printf "."
     printf "\n"
-    echo -e "${GREEN}Requirement tools installed${RESET}"
-fi
     sudo apt-get install testssl.sh gnutls-bin openssl -y
     sudo apt-get install --reinstall ca-certificates
     sudo update-ca-certificates --fresh
+    echo -e "${GREEN}Requirement tools installed${RESET}"
+fi
+    
 
 }
 
@@ -105,7 +106,7 @@ echo """-----------------------------------"""
 
 printf "\n"
 
-if [ "$count_installed" -ge 1 ]; then
+if [ "$count_installed" -ge 3 ]; then
     printf "${GREEN}All required tools are already installed.${RESET}\n"
 else
     echo -e "${RED}\nNot all required tools are installed.${RESET}\n"
