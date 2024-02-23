@@ -77,13 +77,12 @@ else
     printf "."
     sleep 1
     printf "."
-    sudo apt-get install testssl.sh gnutls-bin openssl -y
-    sudo apt-get install --reinstall ca-certificates
-    sudo update-ca-certificates --fresh
     printf "\n"
     echo -e "${GREEN}Requirement tools installed${RESET}"
 fi
-
+    sudo apt-get install testssl.sh gnutls-bin openssl -y
+    sudo apt-get install --reinstall ca-certificates
+    sudo update-ca-certificates --fresh
 
 }
 
