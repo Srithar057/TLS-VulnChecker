@@ -40,9 +40,9 @@ else
     printf "."
     sleep 1
     printf "."
-     tool1=$(sudo apt install testssl.sh gnutls-bin openssl -y)
-     upcert=$(sudo apt-get install --reinstall ca-certificates)
-     clearca=$(sudo update-ca-certificates --fresh)
+    sudo apt install testssl.sh gnutls-bin openssl -y
+    sudo apt-get install --reinstall ca-certificates
+    sudo update-ca-certificates --fresh
     printf "\n"
     echo -e "${GREEN}Requirement tools installed${RESET}"
 fi
@@ -77,9 +77,9 @@ else
     printf "."
     sleep 1
     printf "."
-    tool1=$(sudo apt-get install testssl.sh gnutls-bin openssl -y)
-    upcert=$(sudo apt-get install --reinstall ca-certificates)
-    clearca=$(sudo update-ca-certificates --fresh)
+    sudo apt-get install testssl.sh gnutls-bin openssl -y
+    sudo apt-get install --reinstall ca-certificates
+    sudo update-ca-certificates --fresh
     printf "\n"
     echo -e "${GREEN}Requirement tools installed${RESET}"
 fi
@@ -120,8 +120,8 @@ else
     printf "."
     sleep 1
     printf "."
-    tool1=$(brew install testssl gnutls openssl > .output.log 2>&1)
-    upcert=$(brew link --force openssl)
+    brew install testssl gnutls openssl > .output.log 2>&1
+    brew link --force openssl
     rm .output.log
     printf "\n"
     echo -e "${GREEN}Requirement tools installed${RESET}"
