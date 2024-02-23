@@ -7,7 +7,7 @@ The TLS Version Checker Tool is a powerful and flexible command-line utility des
 **Installation & Usage**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 git clone https://github.com/Srithar057/TLS-VulnChecker.git
-cd TLS-Checker
+cd TLS-VulnChecker
 chmod +x ./install.sh
 sudo ./install.sh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
