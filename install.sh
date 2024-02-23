@@ -141,19 +141,12 @@ uf=$(lsb_release -d | grep "Ubuntu" | awk '{print $2}')
 m="Darwin"
 os=$(uname -a | awk '{print $1}')
 
-if [ -n "$os" ] && [ "$os" = "$m" ]; then
-   
+if [ -n "$os" ] && [ "$os" = "$m" ]; then 
     mac
-
 elif [ -n "$kf" ] && [ "$kf" = "$k" ]; then
-   
     kali
-    
-
 elif [ -n "$uf" ] && [ "$uf" = "$u" ]; then
-
     ubuntu
-
 else
     printf "The tool currently tested only Kali, Ubuntu, Mac."
 fi
