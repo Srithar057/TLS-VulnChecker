@@ -14,6 +14,7 @@ printf "\n"
 
 kali(){
 required_tools=("openssl" "gnutls-cli" "testssl")
+printf "${RED}Required Tools:${RESET}\n"
 echo """--------------------------------------------------"""
 count_installed=0
 for tool in "${required_tools[@]}"; do
@@ -30,28 +31,26 @@ if [ "$count_installed" -ge 3 ]; then
     printf "${GREEN}All required tools are already installed.${RESET}\n"
 else
     echo -e "${RED}\nNot all required tools are installed.${RESET}\n"
-    printf "\n"
     printf "required tools are installing"
-    sleep 1
-    printf "."
-    sleep 1
-    printf "."
-    sleep 1
-    printf "."
-    sleep 1
-    printf "."
-    sudo apt install testssl.sh gnutls-bin openssl -y
-    sudo apt-get install --reinstall ca-certificates
-    sudo update-ca-certificates --fresh
+    cmd1=$(sudo apt install testssl.sh gnutls-bin openssl -y &> /dev/null)
+    cmd2=$(sudo apt-get install --reinstall ca-certificates &> /dev/null)
+    cmd3=$(sudo update-ca-certificates --fresh &> /dev/null)
     printf "\n"
-    echo -e "${GREEN}Requirement tools installed${RESET}"
+    printf "\n"
+    for ((i = 0; i < 50; i++)); do
+    sleep 0.1
+    printf "${cyan}▇${RESET}"
+    done
+    echo -e "${GREEN} Done!${RESET}"
+    printf "\n"
+    #echo -e "${GREEN}Requirement tools installed${RESET}"
 fi
-   
 
 }
 
 ubuntu(){
 required_tools=("openssl" "gnutls-cli" "testssl")
+printf "${RED}Required Tools:${RESET}\n"
 echo """--------------------------------------------------"""
 count_installed=0
 for tool in "${required_tools[@]}"; do
@@ -78,17 +77,25 @@ else
     sleep 1
     printf "."
     printf "\n"
-    sudo apt-get install testssl.sh gnutls-bin openssl -y
-    sudo apt-get install --reinstall ca-certificates
-    sudo update-ca-certificates --fresh
-    echo -e "${GREEN}Requirement tools installed${RESET}"
+    cmd1=$(sudo apt install testssl.sh gnutls-bin openssl -y &> /dev/null)
+    cmd2=$(sudo apt-get install --reinstall ca-certificates &> /dev/null)
+    cmd3=$(sudo update-ca-certificates --fresh &> /dev/null)
+     printf "\n"
+    printf "\n"
+    for ((i = 0; i < 50; i++)); do
+    sleep 0.1
+    printf "${cyan}▇${RESET}"
+    done
+    echo -e "${GREEN} Done!${RESET}"
+    printf "\n"
+    #echo -e "${GREEN}Requirement tools installed${RESET}"
 fi
     
 
 }
 
 mac() {
-    printf "${RED}Required Tools:${RESET}\n"
+printf "${RED}Required Tools:${RESET}\n"
 echo """-----------------------------------"""
 required_tools=("openssl" "gnutls-cli" "testssl.sh")
 
@@ -112,23 +119,18 @@ else
     echo -e "${RED}\nNot all required tools are installed.${RESET}\n"
     printf "\n"
     printf "required tools are installing"
-    sleep 1
-    printf "."
-    sleep 1
-    printf "."
-    sleep 1
-    printf "."
-    sleep 1
-    printf "."
     brew install testssl gnutls openssl > .output.log 2>&1
     brew link --force openssl
     rm .output.log
     printf "\n"
-    echo -e "${GREEN}Requirement tools installed${RESET}"
+    for ((i = 0; i < 50; i++)); do
+    sleep 0.1
+    printf "${cyan}▇${RESET}"
+    done
+    echo -e "${GREEN} Done!${RESET}"
+    printf "\n"
+    #echo -e "${GREEN}Requirement tools installed${RESET}"
 fi
-
-
-
 }
 
 
@@ -146,6 +148,7 @@ if [ -n "$os" ] && [ "$os" = "$m" ]; then
 elif [ -n "$kf" ] && [ "$kf" = "$k" ]; then
    
     kali
+    
 
 elif [ -n "$uf" ] && [ "$uf" = "$u" ]; then
 
@@ -156,3 +159,8 @@ else
 fi
 
 chmod 777 Tlschecker.sh
+
+echo """--------------------------------------------------------------------------------------------"""
+
+echo -e ""
+echo -e "${RED}                             〄 ${RESET} ${GREEN} Installation completed. ${RESET} ${RED} 〄 ${RESET}"
