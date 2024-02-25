@@ -16,6 +16,8 @@ clear_screen() {
     printf "\033c" 
 }
 
+# this tool i automated for finding tls Vulnerability Connect with: https://www.linkedin.com/in/sritharparthasarathi
+
 banner() {
 printf """${cyan}
 .----------------------------------------------.
@@ -106,7 +108,7 @@ else
 fi
 
 rm output.log output1.log output2.log output3.log output4.log
-
+# this tool i automated for finding tls Vulnerability Connect with: https://www.linkedin.com/in/sritharparthasarathi
 printf "\n"
 o="Darwin"
 os=$(uname -a | awk '{print $1}')
@@ -179,6 +181,7 @@ printf "$t11\n"
 t12=$(testssl -F $domain:443 | awk '/(CVE-2015-0204)/ {print; getline; print; getline; print}' | awk '!seen[$0]++' | awk '!/Done/')
 printf "$t12\n"
 t13=$(testssl -J $domain:443 | awk '/(CVE-2015-4000)/ {print; getline; print; getline; print}' | awk '!seen[$0]++' | awk '!/Done/') 
+# this tool i automated for finding tls Vulnerability Connect with: https://www.linkedin.com/in/sritharparthasarathi
 printf "$t13\n"
 t14=$(testssl -D $domain:443 | awk '/(CVE-2016-0800, CVE-2016-0703)/ {print; getline; print; getline; print}' | awk '!seen[$0]++' | awk '!/Done/')
 printf "$t14\n"
